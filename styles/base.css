@@ -51,6 +51,10 @@ img{
     height: auto;
 }
 
+li{
+    padding: 5px 0;
+}
+
 footer{
     background-color: rgb(43, 43, 211);
     color: #eee;
