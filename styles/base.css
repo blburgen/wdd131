@@ -1,14 +1,43 @@
-
-.roboto {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+body{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-.yarndings-20-regular {
+.yarndings {
   font-family: "Yarndings 20", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #333;
+}
+
+nav a{
+    margin: 1rem;
+    flex: auto;
+    text-align: center;
+    color: #eee;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: aqua;
+}
+
+main{
+    background-color: beige;
+    display: grid;
+    justify-content: center;
+    max-width: 800px;
+}
+
+#course-title{
+    display: block;
+    text-align: center;
+    background-color: rgb(60, 60, 210);
+    color: #eee;
+    padding: 2rem;
+    font-size: xx-large;
 }
