@@ -1,0 +1,9 @@
+@media screen and (min-width: 800px){
+    main{
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    h1{
+        grid-column: 1/4;
+    }
+}
