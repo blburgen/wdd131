@@ -28,12 +28,13 @@ h1{
 }
 
 nav{
-    display: flex;
-    flex-wrap: wrap;
+    margin-top: 1rem;
+    display: block;
     align-items: center;
 }
 
 nav a{
+    display: none;
     margin: 1rem;
     text-align: center;
     color: #eee;
@@ -64,4 +65,22 @@ footer{
   font-family: "Yarndings 20", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+#menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❎";
+}
+
+.open a {
+	display: block;
 }

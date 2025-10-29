@@ -6,4 +6,19 @@
     h1{
         grid-column: 1/4;
     }
+
+    nav {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    nav a{
+        display: block;
+    }
+
+    #menu {
+		display: none;
+	}
 }
