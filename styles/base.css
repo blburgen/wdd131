@@ -4,6 +4,7 @@ body{
 
 header{
     color: #eee;
+    background-color: #2b2bd3;
 }
 
 nav{
@@ -21,7 +22,7 @@ nav a{
 }
 
 nav a:hover{
-    color: aqua;
+    color: #0ff;
 }
 
 main{
@@ -39,7 +40,7 @@ h1{
 h2{
     color: #eee;
     text-align: center;
-    background-color:  rgb(43, 43, 211);
+    background-color:  #2b2bd3;
     margin:auto;
     padding: 10px;
     border-radius: .75rem .75rem 0 0;
@@ -56,7 +57,7 @@ li{
 }
 
 footer{
-    background-color: rgb(43, 43, 211);
+    background-color: #2b2bd3;
     color: #eee;
     text-align: center;
     padding: 10px;
@@ -70,7 +71,7 @@ footer{
 }
 
 .card {
-    border: 1px solid black;
+    border: 1px solid #000;
     border-radius: .75rem;
     background-color: #eee;
     margin: 10px;
@@ -107,7 +108,6 @@ footer{
 #course-title{
     display: block;
     text-align: center;
-    background-color: rgb(43, 43, 211);
     padding: 2rem;
     font-size: xx-large;
 }
