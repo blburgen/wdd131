@@ -11,32 +11,6 @@ body{
     justify-content: center;
 }
 
-@media screen and (min-width: 800px){
-    header,main,footer{
-        max-width: 1000px;
-    }
-
-    .data{
-        position: absolute;
-        top: 10px;
-        left: 20px;
-    }
-
-    .data h2{
-        grid-column: 1/3;
-        position: relative;
-        left: -10px;
-        margin: auto;
-        margin-left: 0;
-        padding: 10px;
-        color: var(--color-main);
-        background-color: var(--background-second);
-    }
-}
-
-
-
-
 header{
     color: var(--color-main);
     background-color: var(--background-main);
@@ -47,7 +21,7 @@ main{
     position: relative;
 }
 
-img{
+.hero img{
     width: 100%;
     height: auto;
 }
@@ -59,7 +33,7 @@ footer{
     padding: 10px;
 }
 
-.data{
+.data, .weather{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--color-main);
@@ -68,22 +42,27 @@ footer{
     gap: 10px;
 }
 
-.data h2{
+h2{
     text-align: center;
     grid-column: 1/3;
+    opacity: 100%;
 }
 
-.data label{
+label{
     text-align: right;
     margin: auto 0;
 }
 
-.data p {
+p {
     margin: 0;
 }
 
-.weatherIcon {
-    width: 50px;
+.weather h2::after{
+    content: url("../images/weather_icon.svg");
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
 }
 
 .yarndings {
