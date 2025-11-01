@@ -1,9 +1,17 @@
-const year = document.getElementById("currentyear")
+const year = document.getElementById("currentyear");
+const weather = document.querySelector(".weather");
 
 const today = new Date();
 
 const temperature = 50; // temperature in °F
 const windSpeed = 5; // wind speed in mph
+
+let weatherInfo = [
+    ["Temperature(°F):",temperature],
+    ["Conditions:", "Partly Cloudy"],
+    ["Wind(mph):",windSpeed],
+    ["Wind Chill(°F):", calculateWindChill(temperature,windSpeed)]
+]
 
 year.innerHTML = today.getFullYear();
 document.getElementById("lastModified").innerHTML = "Last Modification: " + document.lastModified;
@@ -18,3 +26,13 @@ function calculateWindChill(temp, windSpeed){
 }
 
 windchill = calculateWindChill(temperature, windSpeed);
+
+weatherInfo.forEach(function(info){
+    const label = document.createElement("label");
+    const p = document.createElement("p");
+
+    label.textContent = info[0];
+    p.textContent=info[1];
+    weather.append(label);
+    weather.append(p);
+})
