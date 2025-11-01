@@ -1,6 +1,23 @@
+:root{
+    --color-main: #eee;
+    --color-second: #111;
+    --background-main: #2b2bd3;
+    --background-second: #0e253a;
+}
+
+body{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+header{
+    color: var(--color-main);
+    background-color: var(--background-main);
+    text-align: center;
+}
+
 footer{
-    background-color: rgb(43, 43, 211);
-    color: #eee;
+    background-color: var(--background-main);
+    color: var(--color-main);
     text-align: center;
     padding: 10px;
 }
