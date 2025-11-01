@@ -44,4 +44,8 @@
         /* height: auto; */
     }
 
+    #weatherIcon{
+        display: none;
+    }
+
 }
