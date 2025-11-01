@@ -1,0 +1,12 @@
+footer{
+    background-color: rgb(43, 43, 211);
+    color: #eee;
+    text-align: center;
+    padding: 10px;
+}
+
+.yarndings {
+  font-family: "Yarndings 20", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
