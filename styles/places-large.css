@@ -36,7 +36,7 @@
     }
 
     .weather h2::after{
-        content: url("../images/weather_icon.svg");
+        content: "⛅";
         display: inline-block;
         margin-left: 10px;
         width: 30px;
