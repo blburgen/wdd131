@@ -1,8 +1,4 @@
 @media screen and (min-width: 800px){
-    /* body, header, main, footer{
-        width: 100%;
-    } */
-
     .data{
         position: absolute;
         top: 10px;
@@ -34,7 +30,6 @@
         margin-left: 10px;
         width: 30px;
         height: 30px;
-        /* height: auto; */
     }
 
     #weatherIcon{
