@@ -4,7 +4,7 @@ body{
 
 header{
     display: flex;
-    background-color: rgb(43, 43, 211);
+    background-color: #2b2bd3;
     color: #eee;
     padding: 10px;
     justify-content: space-between;
@@ -18,7 +18,6 @@ main{
 }
 
 figure{
-    margin: 0 auto;
     text-align: center;
     margin: 1rem;
 }
@@ -44,12 +43,12 @@ nav a{
 nav a:hover{
     margin: .75rem;
     font-size: larger;
-    border: 1px aquamarine solid;
-    color: aquamarine;
+    border: 1px #7fffd4 solid;
+    color: #7fffd4;
 }
 
 footer{
-    background-color: rgb(43, 43, 211);
+    background-color: #2b2bd3;
     color: #eee;
     text-align: center;
     padding: 10px;
