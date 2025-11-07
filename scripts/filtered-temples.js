@@ -1,4 +1,9 @@
-const year = document.getElementById("currentyear")
+const year = document.getElementById("currentyear");
+const home = document.getElementById("home");
+const old = document.getElementById("old");
+const newid = document.getElementById("new");
+const large = document.getElementById("large");
+const small = document.getElementById("small");
 
 const today = new Date();
 
@@ -96,10 +101,31 @@ const temples = [
   }
 ];
 
-createTempleCard();
+createTempleCard(temples);
 
-function createTempleCard(){
-  temples.forEach(temple => {
+home.addEventListener("click", () =>{
+  createTempleCard(temples);
+});
+
+old.addEventListener("click", () => {
+  createTempleCard(temples.filter(temple => parseInt(temple.dedicated.slice(0,4))<1900));
+});
+
+newid.addEventListener("click", () => {
+  createTempleCard(temples.filter(temple => parseInt(temple.dedicated.slice(0,4))>2000));
+});
+
+large.addEventListener("click", () => {
+  createTempleCard(temples.filter(temple => parseInt(temple.area)>90000));
+})
+
+small.addEventListener("click", () => {
+  createTempleCard(temples.filter(temple => parseInt(temple.area)<10000));
+})
+ 
+function createTempleCard(filteredTemples){
+  document.querySelector(".temples").innerHTML = '';
+  filteredTemples.forEach(temple => {
     let card = document.createElement("section");
     let name = document.createElement("h2");
     let location = document.createElement("p");
