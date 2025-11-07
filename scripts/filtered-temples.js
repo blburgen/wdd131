@@ -2,6 +2,17 @@ const year = document.getElementById("currentyear")
 
 const today = new Date();
 
+year.innerHTML = today.getFullYear();
+document.getElementById("lastModified").innerHTML = "Last Modification: " + document.lastModified;
+
+const hamButton = document.querySelector("#menu");
+const navigation = document.querySelector("nav");
+
+hamButton.addEventListener("click", () => {
+	navigation.classList.toggle("open");
+	hamButton.classList.toggle("open");
+});
+
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -65,7 +76,7 @@ const temples = [
     dedicated: "1996, October, 13",
     area: 107240,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mount-timpanogos-utah/400x250/mount-timpanogos-temple-lds-885511-wallpaper.jpgg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mount-timpanogos-utah/400x250/mount-timpanogos-temple-lds-885511-wallpaper.jpg"
   },
   {
     templeName: "Provo City Center",
@@ -85,13 +96,31 @@ const temples = [
   }
 ];
 
-year.innerHTML = today.getFullYear();
-document.getElementById("lastModified").innerHTML = "Last Modification: " + document.lastModified;
+createTempleCard();
 
-const hamButton = document.querySelector("#menu");
-const navigation = document.querySelector("nav");
+function createTempleCard(){
+  temples.forEach(temple => {
+    let card = document.createElement("section");
+    let name = document.createElement("h2");
+    let location = document.createElement("p");
+    let dedication = document.createElement("p");
+    let area = document.createElement("p");
+    let img = document.createElement("img");
 
-hamButton.addEventListener("click", () => {
-	navigation.classList.toggle("open");
-	hamButton.classList.toggle("open");
-});
+    name.textContent = temple.templeName;
+    location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+    dedication.innerHTML = `<span class="label">Dedication:</span> ${temple.dedicated}`;
+    area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
+    img.setAttribute("src", temple.imageUrl);
+    img.setAttribute("alt", `${temple.templeName} Temple`);
+    img.setAttribute("loading", "lazy");
+
+    card.appendChild(name);
+    card.appendChild(location);
+    card.appendChild(dedication);
+    card.appendChild(area);
+    card.appendChild(img);
+
+    document.querySelector(".temples").appendChild(card);
+  })
+}

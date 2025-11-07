@@ -1,0 +1,28 @@
+@media screen and (min-width: 910px){
+    main div{
+    grid-template-columns: 1fr 1fr;
+    }
+
+    img{
+        margin: 1rem;
+    }
+
+    h1{
+        columns: 1/4;
+    }
+
+    nav {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    nav a{
+        display: block;
+    }
+
+    #menu {
+		display: none;
+	}
+}

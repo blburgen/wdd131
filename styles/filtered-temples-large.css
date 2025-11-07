@@ -1,24 +1,5 @@
-@media screen and (min-width: 800px){
-    main{
+@media screen and (min-width: 1360px){
+    main div{
     grid-template-columns: 1fr 1fr 1fr;
     }
-
-    h1{
-        grid-column: 1/4;
-    }
-
-    nav {
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-
-    nav a{
-        display: block;
-    }
-
-    #menu {
-		display: none;
-	}
 }
