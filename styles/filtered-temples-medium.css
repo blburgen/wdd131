@@ -3,10 +3,6 @@
     grid-template-columns: 1fr 1fr;
     }
 
-    img{
-        margin: 1rem;
-    }
-
     nav {
         margin: 0;
         display: flex;
