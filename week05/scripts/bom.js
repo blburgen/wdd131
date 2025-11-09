@@ -41,10 +41,11 @@ function deleteChapter(chapter){
 
 button.addEventListener("click", function(){
     if (input.value.trim() !== ''){
-        displayList(input.value.trim());
-        chaptersArray.push(input.value.trim());
-        setChapterList();
-        
+        if(!chaptersArray.includes(input.value.trim())){
+            displayList(input.value.trim());
+            chaptersArray.push(input.value.trim());
+            setChapterList();
+        }
         input.value = '';
     }
     input.focus();    
