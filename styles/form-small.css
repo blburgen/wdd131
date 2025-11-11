@@ -22,6 +22,19 @@ footer{
 
 input[type="radio"]{
     display: block;
+    justify-content: center;
+}
+
+.stars{
+    display: flex;
+}
+
+.stars label{
+    margin: auto;
+}
+
+.stars label input{
+    margin: auto;
 }
 
 .yarndings {
