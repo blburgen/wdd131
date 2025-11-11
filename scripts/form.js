@@ -1,4 +1,5 @@
 const year = document.getElementById("currentyear")
+let product = document.getElementById("product")
 
 const today = new Date();
 
@@ -32,3 +33,10 @@ const products = [
     averagerating: 5.0
   }
 ];
+
+for (item of products){
+  let option = document.createElement("option")
+  option.value = item["id"]
+  option.textContent = item["name"]
+  product.appendChild(option)
+}
