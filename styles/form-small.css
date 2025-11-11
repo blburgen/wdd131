@@ -3,11 +3,18 @@
     --color1: #eee;
 }
 
+body{
+    min-width: 320px;
+    background-color: var(--color1);
+}
+
 header{
     background-color: var(--bg-color1);
     color: var(--color1);
     padding: 10px;
 }
+
+
 
 h1{
     text-align: center;
@@ -20,20 +27,25 @@ footer{
     padding: 10px;
 }
 
-input[type="radio"]{
+select,
+input[type="radio"],
+input[type="text"],
+input[type="date"],
+textarea{
     display: block;
-    justify-content: center;
+    width: 100%;
+}
+
+input[type="radio"]{
+    margin: auto;
 }
 
 .stars{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .stars label{
-    margin: auto;
-}
-
-.stars label input{
     margin: auto;
 }
 
