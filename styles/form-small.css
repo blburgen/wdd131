@@ -40,6 +40,16 @@ input[type="radio"]{
     margin: auto;
 }
 
+label:has(input[type="checkbox"]){
+    display: block;
+
+}
+
+input[type="submit"]{
+    display: block;
+    margin: auto;
+}
+
 .stars{
     display: flex;
     flex-wrap: wrap;
