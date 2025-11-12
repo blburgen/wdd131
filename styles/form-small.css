@@ -38,12 +38,17 @@ textarea{
     margin: .5rem 0;
 }
 
-input[type="radio"]{
-    margin: auto;
+input[type="checkbox"]{
+    height: 2rem;
+    width: 2em;
+    margin-right: 10px;
 }
 
+
+
 label:has(input[type="checkbox"]){
-    display: block;
+    display: flex;
+    align-items: center;
 }
 
 .required{
