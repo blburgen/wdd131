@@ -47,7 +47,7 @@ label:has(input[type="checkbox"]){
 }
 
 .required{
-    color:#ff0000;
+    color:#700;
 }
 
 input[type="submit"]{
