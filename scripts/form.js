@@ -54,7 +54,6 @@ if(review !== null){
     if (storedCount !== null){
       num += parseInt(storedCount);
       localStorage.setItem('formSubmitCount',num.toString());
-      console.log("hi");
     } else {
       localStorage.setItem('formSubmitCount', '1');
     }
