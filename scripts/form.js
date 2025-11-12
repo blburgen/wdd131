@@ -34,9 +34,47 @@ const products = [
   }
 ];
 
-for (item of products){
-  let option = document.createElement("option")
-  option.value = item["id"]
-  option.textContent = item["name"]
-  product.appendChild(option)
+if (product !== null){
+  for (item of products){
+    let option = document.createElement("option")
+    option.value = item["id"]
+    option.textContent = item["name"]
+    product.appendChild(option)
+  }
 }
+
+let review = document.querySelector(".review");
+let thankyou = document.querySelector(".thankyou")
+
+if(review !== null){
+  let num = 1;
+  document.addEventListener("DOMContentLoaded", () =>{
+    const storedCount = localStorage.getItem('formSubmitCount');
+
+    if (storedCount !== null){
+      num += parseInt(storedCount);
+      localStorage.setItem('formSubmitCount',num.toString());
+      console.log("hi");
+    } else {
+      localStorage.setItem('formSubmitCount', '1');
+    }
+    thankyou.innerHTML = `Thank you!  You have submitted ${num} review(s).`;
+  })
+
+  
+
+  for (item of products){
+    let tr = document.createElement("tr");
+    let td0 = document.createElement("td");
+    td0.textContent = item["id"];
+    let td1 = document.createElement("td");
+    td1.textContent = item["name"];
+    let td2 = document.createElement("td");
+    td2.textContent = item["averagerating"];
+    tr.appendChild(td0)
+    tr.appendChild(td1)
+    tr.appendChild(td2)
+    review.appendChild(tr)
+  }
+}
+
