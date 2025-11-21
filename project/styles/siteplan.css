@@ -1,6 +1,7 @@
 body{
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    background-color: aquamarine;
+    background-color: #7fd6ff;
+    color: #000;
 }
 
 header{
@@ -12,7 +13,9 @@ header{
 
 h1{
     display: block;
-    margin: 0 auto;
+    font-size: 3rem;
+    margin: 1rem auto;
+    text-align: center;
 }
 
 h2{
@@ -24,7 +27,7 @@ main{
     max-width: 800px;
     padding: 10px;
     margin: 0 auto;
-    background-color: beige;
+    background-color: #eee;
 }
 
 footer{
