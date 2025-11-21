@@ -1,0 +1,41 @@
+body{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    background-color: aquamarine;
+}
+
+header{
+    display: flex;
+    background-color: #2b2bd3;
+    color: #eee;
+    padding: 10px;
+}
+
+h1{
+    display: block;
+    margin: 0 auto;
+}
+
+h2{
+    text-align: center;
+    margin: 10px;
+}
+
+main{
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: beige;
+}
+
+footer{
+    background-color: #2b2bd3;
+    color: #eee;
+    text-align: center;
+    padding: 10px;
+}
+
+.yarndings {
+  font-family: "Yarndings 20", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
