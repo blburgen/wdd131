@@ -1,0 +1,17 @@
+@media screen and (min-width: 800px){
+
+    nav {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    nav a{
+        display: block;
+    }
+
+    #menu {
+		display: none;
+	}
+}
