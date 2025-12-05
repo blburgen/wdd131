@@ -1,0 +1,9 @@
+@media screen and (min-width: 1260px){
+    main div{
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    section{
+        max-width: 600px;
+    }
+}

@@ -1,13 +1,21 @@
+:root{
+    --bg-color1: #2b2bd3;
+    --bg-color2: #7fd6ff;
+    --bg-color3: #eee;
+    --color1: #000;
+    --color2: #eee;
+}
+
 body{
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    background-color: #7fd6ff;
-    color: #000;
+    background-color: var(--bg-color2);
+    color: var(--color1);
 }
 
 header{
     display: flex;
-    background-color: #2b2bd3;
-    color: #eee;
+    background-color: var(--bg-color1);
+    color: var(--color2);
     padding: 10px;
     justify-content: space-between;
 }
@@ -22,16 +30,34 @@ nav a{
     display: none;
     margin: 1rem;
     text-align: center;
-    color: #eee;
+    color: var(--color2);
     text-decoration: none;
 }
 
 nav a:hover{
     margin: .75rem;
     font-size: larger;
-    border: 1px #7fffd4 solid;
-    color: #7fffd4;
+    border: 1px var(--bg-color2) solid;
+    color: var(--bg-color2);
 }
+
+main{
+    margin: 1rem auto;  
+}
+
+
+h1, h2, p{
+    text-align: center;
+}
+
+footer{
+    background-color: #2b2bd3;
+    color: var(--color2);
+    text-align: center;
+    padding: 10px;
+}
+
+/* Classes */
 
 .header{
     padding-right: 10px;
@@ -39,15 +65,8 @@ nav a:hover{
     font-size: xx-large;
 }
 
-main{
-    margin: 1rem auto;  
-}
-
-footer{
-    background-color: #2b2bd3;
-    color: #eee;
-    text-align: center;
-    padding: 10px;
+.open a {
+	display: block;
 }
 
 .yarndings {
@@ -55,6 +74,8 @@ footer{
   font-weight: 400;
   font-style: normal;
 }
+
+/* IDs */
 
 #menu {
     position: absolute;
@@ -70,17 +91,5 @@ footer{
 	content: "❎";
 }
 
-.open a {
-	display: block;
-}
 
-img{
-    display: block;
-    max-width: 400px;
-    margin: 1rem;
-    box-shadow: 5px 5px 10px #222;
-}
 
-h1, h2, p{
-    text-align: center;
-}

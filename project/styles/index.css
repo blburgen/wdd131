@@ -1,0 +1,30 @@
+main div{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+section{
+  display: grid;
+  background-color: var(--bg-color3);
+  border: 1px solid var(--bg-color3);
+  margin: auto;
+  width: 335px;
+  height: 100%;
+}
+
+section p{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+iframe{
+  display: block;
+  margin: auto;
+  box-shadow: 5px 5px 10px var(--color1);  
+}
+
+.artimg{
+  display: flex;
+  margin: 1rem;
+}
