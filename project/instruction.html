@@ -31,43 +31,37 @@
         <h1>Burgener Art - Instruction</h1>
         <form method="get" action="thankyou.html">
             <div class="section">
-                <label for="product" class="section">Product Name<span class="required">*</span><select name="product" id="product" required>
-                    <option value="" disabled selected>Select a Product ...</option>
+                <label for="training" class="section">Product Name<span class="required">*</span> <select name="training" id="training" required>
+                    <option value="" disabled selected>Select a Training ...</option>
                 </select></label>
             </div>
             
-            
-            <div class="section" id="rating">Overall Rating<span class="required">*</span>
-                <div class="stars">
-                    <label for="onestar">&star;<input type="radio" name="rating" id="onestar" value="1" required></label>
-                    <label for="twostar">&star;&star;<input type="radio" name="rating" id="twostar" value="2" required></label>
-                    <label for="threestar">&star;&star;&star;<input type="radio" name="rating" id="threestar" value="3" required></label>
-                    <label for="fourstar">&star;&star;&star;&star;<input type="radio" name="rating" id="fourstar" value="4" required></label>
-                    <label for="fivestar">&star;&star;&star;&star;&star;<input type="radio" name="rating" id="fivestar" value="5" required></label>
-                </div>
-            </div>
-            
             <div class="section">
-                <label for="date" class="section">Date of Installation<span class="required">*</span><input type="date" name="date" id="date" required></label>
+                <label for="date" class="section">Desired Date of Training Range (+/- 10 days from this date)<span class="required">*</span> <input type="date" name="date" id="date" required></label>
+            </div>
+
+            <div class="sectino">
+                <label for="email">Your email address<span class="required">*</span>: </address><input type="email" name="email" id="email" required></label>
             </div>
             
             
-            <div class="section">Which feature did you find useful in the product? <br>(Check all that apply)
-                <label for="durability"><input type="checkbox" name="durability" id="durability" value="durability">Durability</label>
-                <label for="ease"><input type="checkbox" name="ease" id="ease" value="ease">Ease of Use</label>
-                <label for="performance"><input type="checkbox" name="performance" id="performance" value="performance">Performance</label>
-                <label for="design"><input type="checkbox" name="design" id="design" value="design">Design</label>
+            <div class="section">Which feature do you find useful in Trainings? <br>(Check all that apply)
+                <label for="oil"><input type="checkbox" name="oil" id="oil" value="oil">Oil Painting</label>
+                <label for="acrylic"><input type="checkbox" name="acrylic" id="acrylic" value="acrylic">Acrylic Painting</label>
+                <label for="water"><input type="checkbox" name="water" id="water" value="water">Watercolor Painting</label>
+                <label for="beginning"><input type="checkbox" name="beginning" id="beginning" value="beginning">For Beginners</label>
+                <label for="advance"><input type="checkbox" name="advance" id="advance" value="advance">For Advance Learning</label>
             </div>
 
             <div class="section">
-                <label for="review" class="section">Written Reveiw (Optional)<textarea name="review" id="review"></textarea></label>
+                <label for="review" class="section">Specifics of the training you would like to have (Optional)<textarea name="review" id="review"></textarea></label>
             </div>
 
             <div class="section">
                 <label for="name" class="section">Your Name (Optional)<input type="text" name="name" id="name"></label>
             </div>
 
-            <input type="submit" value="Post Review" class="submit">
+            <input type="submit" value="Request Training" class="submit">
         </form>
     </main>
     <footer>

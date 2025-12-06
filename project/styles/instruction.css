@@ -1,0 +1,47 @@
+select,
+input[type="email"],
+input[type="text"],
+input[type="date"],
+textarea{
+    box-sizing: border-box;
+    display: block;
+    width:100%;
+    border-radius: 6px;
+    padding: .5rem;
+    margin: .5rem 0;
+}
+
+input[type="checkbox"]{
+    height: 2rem;
+    width: 2em;
+    margin-right: 10px;
+}
+
+
+label:has(input[type="checkbox"]){
+    display: flex;
+    align-items: center;
+}
+
+.required{
+    color:#700;
+}
+
+input[type="submit"]{
+    display: block;
+    margin: .5rem auto;
+    border-radius: 6px;
+    padding: .5rem;
+
+}
+
+.section{
+    margin-top: 1rem;
+}
+
+.thankyou{
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    
+}
