@@ -1,7 +1,7 @@
 main div{
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 section{
@@ -18,9 +18,11 @@ section p{
   padding-right: 1rem;
 }
 
-iframe{
+img{
   display: block;
   margin: auto;
+  width: 100%;
+  height: auto;
   box-shadow: 5px 5px 10px var(--color1);  
 }
 

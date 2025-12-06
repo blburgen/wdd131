@@ -7,7 +7,7 @@ const paintings = [
         medium: "Mixed Media/Oil Paint",
         artist: "Brady Burgener",
         descr: "All creatures (from the great blue whale down to the tiny ant) on this earth have to work to live. These tiny ants are working around their home.",
-        imageUrl: "https://drive.google.com/file/d/18M6UTkK1cn0my8l3vbo8z6sw3T4CtDwz/preview"
+        imageUrl: "./images/ant_hill.jpg"
     },
     {
         paintingName: "Apple Blossom",
@@ -16,8 +16,28 @@ const paintings = [
         height: 18,
         medium: "Mixed Media ( Water Soluble Pastels, Acrylic Ink, Acrylic Paint, Oil Paint) on Watercolor Paper",
         artist: "Brady Burgener",
-        descr: "https://drive.google.com/file/d/1edXaiFk23C_eUneiW84JdmpgSV1PoFEA/preview",
-        imageUrl: "https://drive.google.com/file/d/1edXaiFk23C_eUneiW84JdmpgSV1PoFEA/preview"
+        descr: "With Springs comes the apple blossoms.",
+        imageUrl: "./images/apple_blossom.jpg"
+    },
+    {
+        paintingName: "At the Farm",
+        year: "",
+        width: 24,
+        height: 36,
+        medium: "Oil Paint",
+        artist: "Brady Burgener",
+        descr: "The ants are busy at their farm. They have a lot of work to do and don't have time to stop and talk to us.",
+        imageUrl: "./images/at_the_farm.jpg"
+    },
+    {
+        paintingName: "Beauty Through the Heart",
+        year: "",
+        width: 12,
+        height: 6.5,
+        medium: "Mixed Media/Oil Paint on Wood",
+        artist: "Brady Burgener",
+        descr: "",
+        imageUrl: "./images/beauty_heart.jpg"
     },
     {
         paintingName: "Black Rose",
@@ -26,7 +46,38 @@ const paintings = [
         height: 20,
         medium: "Oil Paint",
         artist: "Brady Burgener",
-        imageUrl: "https://drive.google.com/file/d/1JxPrkkyepTM_knJKKNYJgHHy0qpywLFE/preview"
+        descr: "The colors dance around this black rose.",
+        imageUrl: "./images/black_rose.jpg"
+    },
+    {
+        paintingName: "Chrysanthemum",
+        year: "",
+        width: 24,
+        height: 18,
+        medium: "Mixed Media ( Water Soluble Pastels, Acrylic Ink, Acrylic Paint, Oil Paint) on Watercolor Paper",
+        artist: "Brady Burgener",
+        descr: "During the summer we are given the privilege of smelling the chrysanthemums. In this image we see a group of chrysanthemum flower and insects against an abstract background.",
+        imageUrl: "./images/chrysanthemum.jpg"
+    },
+    {
+        paintingName: "Dancing Girl",
+        year: "",
+        width: 18,
+        height: 24,
+        medium: "Mixed Media ( Water Soluble Pastels, Acrylic Ink, Acrylic Paint, Oil Paint) on Watercolor Paper",
+        artist: "Brady Burgener",
+        descr: "If we listen to the songs in our heart, we will dance to it. In this image we see a girl dancing with a ribbon to the song in her heart.",
+        imageUrl: "./images/dancing_girl.jpg"
+    },
+    {
+        paintingName: "Fire Within",
+        year: "",
+        width: 4.5,
+        height: 6,
+        medium: "Watercolor on Watercolor Paper",
+        artist: "Brady Burgener",
+        descr: "",
+        imageUrl: "./images/fire_within.jpg"
     },
     {
         paintingName: "Nectar Source",
@@ -36,7 +87,7 @@ const paintings = [
         medium: "Oil Paint",
         artist: "Brady Burgener",
         descr: "Water towers are often used to collect stores of water. What if instead of collecting water, it were to collect nectar. In this image we explore the possibility of a Nectar Source.",
-        imageUrl: "https://drive.google.com/file/d/1LuFp9uTcDYnjKC4xWcHA7Ed0Q4dzeDEU/preview"
+        imageUrl: "./images/nectar_source.jpg"
     }
 ]
 
@@ -47,23 +98,23 @@ function createArtCard(filteredArt){
   filteredArt.forEach(art => {
     let card = document.createElement("section");
     let name = document.createElement("h2");
+    let descp = document.createElement("p");
     let dimentions = document.createElement("p");
     let medium = document.createElement("p");
     let divimg = document.createElement("div");
-    let img = document.createElement("iframe");
+    let img = document.createElement("img");
 
     name.textContent = art.paintingName;
-    
-    dimentions.innerHTML = `<span class="label">Dimentions:</span> ${art.width} X ${art.height}`;
-    medium.innerHTML = `<span class="label">medium:</span> ${art.medium}`;
+    descp.textContent = art.descr;
+    dimentions.innerHTML = `<span class="label">Dimentions(inch x inch):</span> ${art.width} X ${art.height}`;
+    medium.innerHTML = `<span class="label">Medium:</span> ${art.medium}`;
     divimg.setAttribute("class", "artimg");
     img.setAttribute("src", art.imageUrl);
     img.setAttribute("title", `${art.paintingName}`);
-    img.setAttribute("width", 300);
-    img.setAttribute("height", 400);
     img.setAttribute("loading", "lazy");
 
     card.appendChild(name);
+    card.appendChild(descp)
     card.appendChild(dimentions);
     card.appendChild(medium);
     divimg.appendChild(img);
