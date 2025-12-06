@@ -26,7 +26,36 @@ img{
   box-shadow: 5px 5px 10px var(--color1);  
 }
 
+button{
+  box-shadow: 5px 5px 10px var(--color1);
+  border-radius: 1rem;
+  font-size: 1.5rem;
+}
+
+button:hover{
+  box-shadow: 2.5px 2.5px 5px var(--color1);
+  translate: 2.5px 2.5px;
+}
+
+button:active{
+  background-color: var(--bg-color2);
+  box-shadow: none;
+  translate: 5px 5px;
+}
+
 .artimg{
   display: flex;
   margin: 1rem;
 }
+
+.sort{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.active{
+  background-color: var(--bg-color2);
+}
+

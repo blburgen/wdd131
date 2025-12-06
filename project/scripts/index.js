@@ -1,7 +1,7 @@
 const paintings = [
     {
         paintingName: "Ant Hill",
-        year: "",
+        year: "2022",
         width: 16,
         height: 20,
         medium: "Mixed Media/Oil Paint",
@@ -11,7 +11,7 @@ const paintings = [
     },
     {
         paintingName: "Apple Blossom",
-        year: "",
+        year: "2022",
         width: 24,
         height: 18,
         medium: "Mixed Media ( Water Soluble Pastels, Acrylic Ink, Acrylic Paint, Oil Paint) on Watercolor Paper",
@@ -21,7 +21,7 @@ const paintings = [
     },
     {
         paintingName: "At the Farm",
-        year: "",
+        year: "2022",
         width: 24,
         height: 36,
         medium: "Oil Paint",
@@ -36,12 +36,12 @@ const paintings = [
         height: 6.5,
         medium: "Mixed Media/Oil Paint on Wood",
         artist: "Brady Burgener",
-        descr: "",
+        descr: "Even the most gental flower can have a dark side.",
         imageUrl: "./images/beauty_heart.jpg"
     },
     {
         paintingName: "Black Rose",
-        year: "",
+        year: "2022",
         width: 16,
         height: 20,
         medium: "Oil Paint",
@@ -51,7 +51,7 @@ const paintings = [
     },
     {
         paintingName: "Chrysanthemum",
-        year: "",
+        year: "2022",
         width: 24,
         height: 18,
         medium: "Mixed Media ( Water Soluble Pastels, Acrylic Ink, Acrylic Paint, Oil Paint) on Watercolor Paper",
@@ -61,7 +61,7 @@ const paintings = [
     },
     {
         paintingName: "Dancing Girl",
-        year: "",
+        year: "2022",
         width: 18,
         height: 24,
         medium: "Mixed Media ( Water Soluble Pastels, Acrylic Ink, Acrylic Paint, Oil Paint) on Watercolor Paper",
@@ -76,12 +76,12 @@ const paintings = [
         height: 6,
         medium: "Watercolor on Watercolor Paper",
         artist: "Brady Burgener",
-        descr: "",
+        descr: "As we watch the gental fire that lies within every living being.",
         imageUrl: "./images/fire_within.jpg"
     },
     {
         paintingName: "Nectar Source",
-        year: "",
+        year: "2022",
         width: 18,
         height: 24,
         medium: "Oil Paint",
@@ -128,4 +128,37 @@ function createArtCard(filteredArt){
 
     document.querySelector(".art").appendChild(card);
   })
+}
+
+const all = document.getElementById("all");
+const oil = document.getElementById("oil");
+const water = document.getElementById("water");
+const mixed = document.getElementById("mixed");
+
+all.addEventListener("click", () =>{
+  createArtCard(paintings);
+  buttonactive(all);
+});
+
+oil.addEventListener("click", () => {
+  createArtCard(paintings.filter(painting => painting.medium.slice(0,3).toLowerCase()=="oil"));
+  buttonactive(oil);
+});
+
+water.addEventListener("click", () => {
+  createArtCard(paintings.filter(painting => painting.medium.slice(0,5).toLowerCase()=="water"));
+  buttonactive(water);
+});
+
+mixed.addEventListener("click", () => {
+  createArtCard(paintings.filter(painting => painting.medium.slice(0,5).toLowerCase()=="mixed"));
+  buttonactive(mixed);
+});
+
+function buttonactive(painttype){
+    all.removeAttribute("class", "active");
+    oil.removeAttribute("class", "active");
+    water.removeAttribute("class", "active");
+    mixed.removeAttribute("class", "active");
+    painttype.setAttribute("class","active");
 }
